@@ -16,10 +16,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class ConvocatoriaPersistenceEntity extends AuditableAbstractPersistenceEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Column(name = "organization_id", nullable = false)
     private Long organizationId;
 

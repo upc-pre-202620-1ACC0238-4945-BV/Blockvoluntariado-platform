@@ -18,10 +18,6 @@ import java.util.List;
 @NoArgsConstructor
 public class ActividadPersistenceEntity extends AuditableAbstractPersistenceEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Column(name = "convocatoria_id", nullable = false)
     private Long convocatoriaId;
 

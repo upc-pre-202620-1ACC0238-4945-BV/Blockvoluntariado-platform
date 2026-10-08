@@ -16,10 +16,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class NotificationPersistenceEntity extends AuditableAbstractPersistenceEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Column(name = "user_id", nullable = false)
     private Long userId;
 

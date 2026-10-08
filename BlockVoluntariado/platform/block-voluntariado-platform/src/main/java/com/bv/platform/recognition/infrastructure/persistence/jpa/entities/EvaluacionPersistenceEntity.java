@@ -16,10 +16,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class EvaluacionPersistenceEntity extends AuditableAbstractPersistenceEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Column(name = "evaluador_id", nullable = false)
     private Long evaluadorId;
 

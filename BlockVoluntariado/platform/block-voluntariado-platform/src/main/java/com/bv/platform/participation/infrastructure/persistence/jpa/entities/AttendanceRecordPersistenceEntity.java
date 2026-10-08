@@ -15,10 +15,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class AttendanceRecordPersistenceEntity extends AuditableAbstractPersistenceEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "actividad_id", nullable = false)
     private ActividadPersistenceEntity actividad;

@@ -15,10 +15,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class DigitalCertificatePersistenceEntity extends AuditableAbstractPersistenceEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Column(name = "volunteer_id", nullable = false)
     private Long volunteerId;
 
