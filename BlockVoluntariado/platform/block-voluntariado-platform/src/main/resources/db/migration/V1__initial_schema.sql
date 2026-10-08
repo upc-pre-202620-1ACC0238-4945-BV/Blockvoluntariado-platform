@@ -128,7 +128,10 @@ CREATE TABLE IF NOT EXISTS evaluaciones (
     feedback TEXT,
     fecha DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_evaluaciones_evaluador (evaluador_id),
+    INDEX idx_evaluaciones_evaluado (evaluado_id),
+    INDEX idx_evaluaciones_tipo (tipo_evaluador)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS notificaciones (
